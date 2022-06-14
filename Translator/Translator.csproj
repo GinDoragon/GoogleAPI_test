@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,6 +8,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="diplom.pdf" />
+    <None Remove="ocr_test.png" />
+    <None Remove="Безымянный.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="diplom.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ocr_test.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Безымянный.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IronOcr" Version="2022.3.0" />
+    <PackageReference Include="System.Speech" Version="6.0.0" />
     <PackageReference Include="Westwind.Globalization" Version="3.1.4" />
   </ItemGroup>
 
